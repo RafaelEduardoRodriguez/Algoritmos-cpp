@@ -10,7 +10,7 @@ using namespace std;
 
 typedef pair<int, int> edge;
 const int MAXN = 100000;
-const int INF = 1 << 30;
+const int INF = 1e9;
 vector<edge> graph[MAXN];
 int dist[MAXN];
 int parent[MAXN];
@@ -56,7 +56,7 @@ void recovery_path(int e){
 int main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(0);
-	
+
 	int nodes, edges, u, v, w;
 	cin >> nodes >> edges;
 	//Creando lista de adyacencia
@@ -75,6 +75,6 @@ int main() {
 	for(int i=path.size()-1; i>=0; i--)
 		cout << " " << path[i];
 	cout << endl;
-		
+
 	return 0;
 }
